@@ -5,7 +5,7 @@ provider "aws" {
 
   access_key               = var.cluster_owner_aws_access_key_id
   secret_key               = var.cluster_owner_aws_secret_access_key
-  region                   = data.aws_region.current.region
+  region                   = data.aws_region.current.name
   profile                  = var.cluster_owner_aws_profile
   shared_credentials_files = var.cluster_owner_aws_shared_credentials_files
 }
@@ -84,7 +84,7 @@ provider "aws" {
 
   access_key               = var.network_owner_aws_access_key_id
   secret_key               = var.network_owner_aws_secret_access_key
-  region                   = data.aws_region.current.region
+  region                   = data.aws_region.current.name
   profile                  = var.network_owner_aws_profile
   shared_credentials_files = var.network_owner_aws_shared_credentials_files
 }
